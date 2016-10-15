@@ -50,7 +50,7 @@ $ node /home/node/webservice.js
 http://yourip:8080/MyWebservice?name=A%25/
 
 #The result is the following JSON String:
-
+```
 {
    "success":true,
    "errmsg":"",
@@ -70,7 +70,7 @@ http://yourip:8080/MyWebservice?name=A%25/
       }
    ]
 }
-
+```
 
 If the port `8080` is used on your machine please use another port and change it in the `webservice.js - line 27` 
 
