@@ -14,6 +14,7 @@ $ /QOpenSys/QIBM/ProdData/OPS/Node4/bin/nodever.sh 4
 
 #Check your Node.js version:
 
+```
 5250> qsh
 $ node -v
 ```
