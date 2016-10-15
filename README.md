@@ -5,6 +5,13 @@ The webservice powered by IBM i needs V7R1 and Node.js delivered with 5770OPS
 
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
+#Check your Node.js version:
+
+```
+5250> qsh
+$ node -v
+```
+
 #Manual Install
 Create the following Directories:
 
