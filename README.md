@@ -66,7 +66,7 @@ http://yourip:8080/MyWebservice?name=A%25/
          "CUSNUM":"583990",
          "LSTNAM":"Abraham",
          "CITY":"Isle",
-         "BALDUE":"500.00"
+         "BALDUE":"500.00" 
       }
    ]
 }
