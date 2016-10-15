@@ -38,14 +38,14 @@ From a PASE shell enter the following:
 $ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 ```
 
-Start the webservice:
+#Start the webservice:
 
 ```
 5250> qsh
 $ node /home/node/webservice.js
 ```
 
-Start the webservice in your browser:
+#Start the webservice in your browser:
 
 http://yourip:8080/MyWebservice?name=A%25/
 
