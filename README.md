@@ -38,7 +38,7 @@ From a PASE shell enter the following:
 $ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 ```
 
-#Start the webservice:
+#Start the webservice on your IBM i:
 
 ```
 5250> qsh
