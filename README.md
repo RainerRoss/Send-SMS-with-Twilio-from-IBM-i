@@ -48,7 +48,7 @@ $ node /home/node/webservice.js
 
 #Start the webservice in your browser:
 
-http://yourip:8080/MyWebservice?name=A%25/
+http://yourip:8080/MyWebservice?name=A%25
 
 #The result is the following JSON String:
 ```
