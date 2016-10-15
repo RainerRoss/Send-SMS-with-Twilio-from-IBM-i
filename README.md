@@ -49,6 +49,29 @@ $ node /home/node/webservice.js
 
 http://yourip:8080/MyWebservice?name=A%25/
 
+#The result is the following JSON String:
+
+{
+   "success":true,
+   "errmsg":"",
+   "records":2,
+   "items":[
+      {
+         "CUSNUM":"846283",
+         "LSTNAM":"Alison",
+         "CITY":"Isle",
+         "BALDUE":"10.00"
+      },
+      {
+         "CUSNUM":"583990",
+         "LSTNAM":"Abraham",
+         "CITY":"Isle",
+         "BALDUE":"500.00"
+      }
+   ]
+}
+
+
 If the port `8080` is used on your machine please use another port and change it in the `webservice.js - line 27` 
 
 check the port on IBM i: 
