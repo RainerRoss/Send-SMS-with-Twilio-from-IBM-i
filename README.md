@@ -1,10 +1,10 @@
 # webservice-IBM-i-and-Node.js
 Providing a JSON webservice based on IBM i and Node.js
 
-The webservice powered by IBM i needs V7R1 and Node.js delivered with 5770OPS
+The webservice powered by IBM i needs V7R1 and Node.js delivered with 5733-OPS
 ```
-5770OPS Option 1 	Node.js 0.x
-5770OPS Option 5 	Node.js 4.x
+5733-OPS Option 1 	Node.js 0.x
+5733-OPS Option 5 	Node.js 4.x
 ```
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
