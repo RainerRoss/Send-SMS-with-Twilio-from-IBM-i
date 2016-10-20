@@ -9,7 +9,7 @@
       // Prototypes                                                       //
       //------------------------------------------------------------------//
 
-      /include json/qrpglesrc,yajl_h
+      /include yajl/qrpglesrc,yajl_h
 
       //------------------------------------------------------------------//
       // Send Data to DTAQ                                                //
@@ -23,7 +23,7 @@
          end-pr;
 
       //------------------------------------------------------------------//
-      // Variablen für DTQ-API                                            //
+      // Variables DTQ-API                                                //
       //------------------------------------------------------------------//
 
          dcl-s   d#dtqname   char(10)   inz('SNDSMSQ');        // DTQ-Name
@@ -49,10 +49,10 @@
       //------------------------------------------------------------------//
          dcl-proc main;
 
-           for index = 1 to 5;
+           for index = 1 to 5;                         // 5 SMS in a loop                       
              body = 'Hello from Node ' + %char(index);
-             to   = '+491719637923';
-             from = '+4979194414015';
+             to   = '+123456789';
+             from = '+123456789';
 
              d#dtqdata = crtjson(body:to:from);
 
@@ -63,7 +63,8 @@
 
          end-proc;
       //------------------------------------------------------------------//
-      // Procedure - create JSON data                                     //
+      // Procedure - create JSON data - for example                       //
+      // {"body":"Hello", "to":"+123456789", "from":"+123456789"}         //
       //------------------------------------------------------------------//
          dcl-proc crtjson export;
          dcl-pi *n           like(jsondata);          // JSON-Data
@@ -77,8 +78,7 @@
          dcl-s   p#rc        int(10) inz;             // ReturnCode
          dcl-s   p#json_p    pointer;                 // JSON-Pointer
          dcl-s   p#jsondata  like(jsondata);          // JSON-Data
-         dcl-s   p#errmsg    varchar(500);            // ErrorMessage xxx
-
+        
            dealloc(n) p#json_p;                       // JSON-Pointer
            p#json_p = %alloc(p#size);                 // Alloc Pointer
 
@@ -89,8 +89,6 @@
             yajl_addchar('to'  :##to);
             yajl_addchar('from':##from);
            yajl_endobj();
-
-           yajl_savebuf('/tmp/json/twiliosms.js':p#errmsg);
 
            p#rc = yajl_copybuf(1141:p#json_p:p#size:p#len);
 
