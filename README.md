@@ -2,9 +2,17 @@
 
 # How does it works
 
-Twilio provides a Node.js API to send SMS messages. This solution give you a simple RPGLE program to send the SMS data to a DataQueue. When the SMS message is sent to the DataQueue a Node.js program wait for new SMS messages. Once the message arrived the Node.js program send the message with the Twilio REST-API.     
+Twilio provides a Node.js API to send SMS messages. This solution give you a simple RPGLE program to send the SMS data to a DataQueue. When the SMS message is sent to the DataQueue a Node.js program wait for new SMS messages. Once the message arrived the Node.js program send the message with the Twilio REST-API.
 
-you need V7R1 and Node.js v4.x delivered with 5733-OPS
+# You need
+```
+The TWILIO credentials - accountSid and authToken - from www.twilio.com/console
+Node.js 4.x
+YAJL from Scott Klement www.scottklement.com/yajl/ 
+```
+
+
+V7R1 and Node.js v4.x delivered with 5733-OPS
 ```
 5733-OPS Option 1 	Node.js 0.x
 5733-OPS Option 5 	Node.js 4.x
@@ -34,14 +42,6 @@ Create the following Directories
 $ mkdir -p /home/node  (for the webservice.js)
 ```
 
-#Git Clone Install
-From a PASE shell enter the following
-
-```
-5250> qsh
-$ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
-```
-
 #Start the webservice on your IBM i
 
 ```
@@ -49,9 +49,6 @@ $ git clone git@github.com:RainerRoss/webservice-IBM-i-and-Node.js.git
 $ node /home/node/webservice.js
 ```
 
-#Start the webservice in your browser
-
-http://yourip:8080/MyWebservice?name=A%25
 
 #The result is the following JSON String
 ```
