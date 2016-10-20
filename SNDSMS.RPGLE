@@ -50,13 +50,13 @@
          dcl-proc main;
 
            for index = 1 to 5;                         // 5 SMS in a loop                       
-             body = 'Hello from Node ' + %char(index);
-             to   = '+123456789';
-             from = '+123456789';
+             body = 'Hello from Node ' + %char(index); // SMS-Body
+             to   = '+123456789';                      // SMS-To
+             from = '+123456789';                      // SMS-From
 
-             d#dtqdata = crtjson(body:to:from);
+             d#dtqdata = crtjson(body:to:from);        // create JSON data 
 
-             snddtaq(d#dtqname:d#dtqlib:d#dtqlength:d#dtqdata);
+             snddtaq(d#dtqname:d#dtqlib:d#dtqlength:d#dtqdata); // Send to DTQ
            endfor;
 
            snddtaq(d#dtqname:d#dtqlib:d#dtqlength:crtjson('*end':to:from));
