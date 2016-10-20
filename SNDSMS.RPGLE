@@ -90,7 +90,7 @@
             yajl_addchar('from':##from);
            yajl_endobj();
 
-           p#rc = yajl_copybuf(1141:p#json_p:p#size:p#len);
+           p#rc = yajl_copybuf(37:p#json_p:p#size:p#len);
 
            if p#rc = *zero and p#len > *zero;
               p#jsondata = %str(p#json_p:p#len);
