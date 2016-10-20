@@ -43,44 +43,12 @@ Create the following Directories
 
 ```
 5250> qsh
-$ mkdir -p /home/node  (for the webservice.js)
+$ mkdir -p /home/node  (for the sendSMSDataFromQueue.js)
 ```
 
-#Start the webservice on your IBM i
+#Start the program on your IBM i
 
 ```
 5250> qsh
-$ node /home/node/webservice.js
-```
-
-
-#The result is the following JSON String
-```
-{
-   "success":true,
-   "errmsg":"",
-   "records":2,
-   "items":[
-      {
-         "CUSNUM":"846283",
-         "LSTNAM":"Alison",
-         "CITY":"Isle",
-         "BALDUE":"10.00"
-      },
-      {
-         "CUSNUM":"583990",
-         "LSTNAM":"Abraham",
-         "CITY":"Isle",
-         "BALDUE":"500.00" 
-      }
-   ]
-}
-```
-
-If the port `8080` is used on your machine please use another port and change it in the `webservice.js - line 27` 
-
-check the port on IBM i: 
-
-```
-5250> netstat *cnn
+$ node /home/node/sendSMSDataFromQueue.js
 ```
