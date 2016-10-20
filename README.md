@@ -7,8 +7,8 @@ Twilio provides a Node.js REST API to send SMS messages. This solution give you 
 # You need
 ```
 - Node.js 4.x 5733-OPS Option 5
-- Install TWILIO Node.js API: npm install twilio
-- The TWILIO credentials - accountSid and authToken - from www.twilio.com/console
+- Install Twilio Node.js API: npm install twilio
+- The Twilio credentials - accountSid and authToken - from www.twilio.com/console
 - YAJL from Scott Klement www.scottklement.com/yajl/ 
 ```
 
