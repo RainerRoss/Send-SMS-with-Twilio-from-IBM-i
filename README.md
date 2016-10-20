@@ -1,6 +1,6 @@
 # Send SMS with Twilio from IBM i
 
-# How does it works
+# How does it work
 
 Twilio provides a Node.js REST API to send SMS messages. This solution give you a simple RPGLE program to send the SMS data to a DataQueue. When the SMS message is sent to the DataQueue a Node.js program is waiting for new SMS messages. Once the message arrived the Node.js program send the message with the Twilio REST-API.
 
