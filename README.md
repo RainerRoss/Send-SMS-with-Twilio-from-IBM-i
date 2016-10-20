@@ -46,7 +46,7 @@ Create the following Directories
 $ mkdir -p /home/node  (for the sendSMSDataFromQueue.js)
 ```
 
-#Start the program on your IBM i
+#Start the Node.js program on your IBM i
 
 ```
 5250> qsh
