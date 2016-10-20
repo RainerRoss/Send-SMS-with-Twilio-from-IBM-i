@@ -89,9 +89,9 @@
             yajl_addchar('to'  :##to);
             yajl_addchar('from':##from);
            yajl_endobj();
-
-           p#rc = yajl_copybuf(37:p#json_p:p#size:p#len);
-
+                                                               
+           p#rc = yajl_copybuf(37:p#json_p:p#size:p#len); // CCSID 37 = USA
+                                                          // CCSID 1141 = GER     
            if p#rc = *zero and p#len > *zero;
               p#jsondata = %str(p#json_p:p#len);
            endif;
