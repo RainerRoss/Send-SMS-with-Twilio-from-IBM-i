@@ -28,6 +28,18 @@ $ node -v
 for example v4.4.6  
 ```
 
+#Enable QRCVDTAQ wait for Node.js
+
+```
+You'll find the Class iDataQueue in the file /QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq.js
+copy this file to the new file /QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq2.js and change the following lines:
+
+70 iDataQueue.prototype.receiveFromDataQueue = function(name, lib, length, wait, cb) {
+76 pgm.addParam(wait, "5p0");
+```
+
+
+
 #Manual Install
 Create the following Directories
 
