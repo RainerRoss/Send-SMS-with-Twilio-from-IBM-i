@@ -7,17 +7,13 @@ Twilio provides a Node.js API to send SMS messages. This solution give you a sim
 # You need
 ```
 The TWILIO credentials - accountSid and authToken - from www.twilio.com/console
-Node.js 4.x
+Node.js 4.x 5733-OPS Option 5
 YAJL from Scott Klement www.scottklement.com/yajl/ 
 ```
-Node.js v4.x delivered with 5733-OPS
-```
-5733-OPS Option 1 	Node.js 0.x
-5733-OPS Option 5 	Node.js 4.x
-```
+
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
-#When you have installed Node.js 4.x set Node.js to V4
+#Once you have installed Node.js 4.x set Node.js to V4
 
 ```
 5250> qsh
