@@ -33,7 +33,7 @@ for example v4.4.6
 ```
 You'll find the Class iDataQueue in the file /QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq.js
 copy this file to the new file /QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq2.js
-and change the following lines:
+and change the following statements:
 
 line 70: iDataQueue.prototype.receiveFromDataQueue = function(name, lib, length, wait, cb) {
 line 76: pgm.addParam(wait, "5p0");
