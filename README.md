@@ -10,9 +10,7 @@ The TWILIO credentials - accountSid and authToken - from www.twilio.com/console
 Node.js 4.x
 YAJL from Scott Klement www.scottklement.com/yajl/ 
 ```
-
-
-V7R1 and Node.js v4.x delivered with 5733-OPS
+Node.js v4.x delivered with 5733-OPS
 ```
 5733-OPS Option 1 	Node.js 0.x
 5733-OPS Option 5 	Node.js 4.x
