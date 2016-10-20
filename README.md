@@ -1,7 +1,10 @@
-# webservice-IBM-i-and-Node.js
-Providing a JSON webservice based on IBM i and Node.js
+# Send SMS with Twilio from IBM i
 
-The webservice powered by IBM i needs V7R1 and Node.js delivered with 5733-OPS
+# How does it works
+
+Twilio provides a Node.js API to send SMS messages. This solution give you a simple RPGLE program to send the SMS data to a DataQueue. When the SMS message is sent to the DataQueue a Node.js program wait for new SMS messages. Once the message arrived the Node.js program send the message with the Twilio REST-API.     
+
+you need V7R1 and Node.js v4.x delivered with 5733-OPS
 ```
 5733-OPS Option 1 	Node.js 0.x
 5733-OPS Option 5 	Node.js 4.x
