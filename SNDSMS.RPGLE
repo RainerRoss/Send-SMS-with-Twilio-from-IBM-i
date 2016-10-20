@@ -27,7 +27,7 @@
       //------------------------------------------------------------------//
 
          dcl-s   d#dtqname   char(10)   inz('SNDSMSQ');        // DTQ-Name
-         dcl-s   d#dtqlib    char(10)   inz('TSTO');           // DTQ-Lib
+         dcl-s   d#dtqlib    char(10)   inz('MYLIB');          // DTQ-Lib
          dcl-s   d#dtqlength packed(05) inz(%size(d#dtqdata)); // DTQ-Length
          dcl-s   d#dtqwait   packed(05) inz(-1);               // DTQ-Wait
          dcl-s   d#dtqdata   char(5000);                       // DTQ-Data
