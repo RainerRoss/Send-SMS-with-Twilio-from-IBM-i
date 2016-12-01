@@ -63,7 +63,7 @@
 
          end-proc;
       //------------------------------------------------------------------//
-      // Procedure - create JSON data - for example                       //
+      // Procedure - create JSON data                                     //
       // {"body":"Hello", "to":"+123456789", "from":"+123456789"}         //
       //------------------------------------------------------------------//
          dcl-proc crtjson export;
