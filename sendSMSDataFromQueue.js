@@ -27,4 +27,4 @@ function sendSMS(data) {
             console.error(err.message);
 	}
     });
-} // Comment
+}
