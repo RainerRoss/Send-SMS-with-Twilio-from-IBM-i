@@ -2,8 +2,8 @@ var xt		= require('/QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/itoolki
 var dq		= require('/QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq2');
 var twilio	= require('twilio'); 
 
-var accountSid	= 'abcdefghijklmn';							// Your Account SID from www.twilio.com/console
-var authToken	= 'abcdefghijklmn';							// Your Auth Token from www.twilio.com/console
+var accountSid	= 'abcdefghijklmn';					// Your Account SID from www.twilio.com/console
+var authToken	= 'abcdefghijklmn';					// Your Auth Token from www.twilio.com/console
 
 var conn	= new xt.iConn('*LOCAL', 'User', 'Password');	// Your User and Password on your IBM i
 var dtq		= new dq.iDataQueue(conn);
