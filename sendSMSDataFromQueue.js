@@ -1,4 +1,3 @@
-// Comment
 var xt		= require('/QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/itoolkit');
 var dq		= require('/QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq2');
 var twilio	= require('twilio');
