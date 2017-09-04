@@ -1,6 +1,6 @@
 var xt		= require('/QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/itoolkit');
 var dq		= require('/QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq2');
-var twilio	= require('twilio');
+var twilio	= require('twilio'); 
 
 var accountSid	= 'abcdefghijklmn';							// Your Account SID from www.twilio.com/console
 var authToken	= 'abcdefghijklmn';							// Your Auth Token from www.twilio.com/console
