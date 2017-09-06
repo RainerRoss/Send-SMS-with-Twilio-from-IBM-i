@@ -32,7 +32,7 @@ $ /QOpenSys/QIBM/ProdData/OPS/Node6/bin/nodever.sh 6
 ```
 5250> qsh
 $ node -v
-for example v6.9.1  
+v6.9.1  
 ```
 
 ## Enable QRCVDTAQ wait for Node.js
