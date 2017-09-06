@@ -18,7 +18,7 @@ Twilio provides a Node.js REST API to send SMS messages. This solution give you 
 
 Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
 
-Download [YAJL](www.scottklement.com/yajl)
+Download [YAJL](http://www.scottklement.com/yajl/)
 
 ## Once you have installed Node.js 6.x set Node.js to V6
 
