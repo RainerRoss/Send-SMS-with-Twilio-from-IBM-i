@@ -25,7 +25,7 @@ Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki
 $ /QOpenSys/QIBM/ProdData/OPS/Node4/bin/nodever.sh 4
 ```
 
-#Check your Node.js version
+# Check your Node.js version
 
 ```
 5250> qsh
@@ -33,7 +33,7 @@ $ node -v
 for example v4.4.6  
 ```
 
-#Enable QRCVDTAQ wait for Node.js
+# Enable QRCVDTAQ wait for Node.js
 
 ```
 You'll find the Class iDataQueue in the file /QOpenSys/QIBM/ProdData/OPS/Node4/os400/xstoolkit/lib/idataq.js
