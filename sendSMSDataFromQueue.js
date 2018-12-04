@@ -9,10 +9,8 @@ var conn    = new xt.iConn('*LOCAL', 'User', 'Password');	// Your User and Passw
 var dtq     = new dq.iDataQueue(conn);
 var client  = new twilio.RestClient(accountSid, authToken);
 
-var data = '';
-
 while (data.body !== '*end') {
-	data = JSON.parse(dtq.receiveFromDataQueue('SNDSMSQ', 'MYLIB', 5000, -1));
+	var data = JSON.parse(dtq.receiveFromDataQueue('SNDSMSQ', 'MYLIB', 5000, -1));
 	console.log('data: ' + JSON.stringify(data));
 	sendSMS(data);
 }
