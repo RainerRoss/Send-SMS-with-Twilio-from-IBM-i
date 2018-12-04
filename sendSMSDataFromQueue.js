@@ -5,9 +5,9 @@ var twilio	= require('twilio');
 var accountSid	= 'abcdefghijklmn';							// Your Account SID from www.twilio.com/console
 var authToken	= 'abcdefghijklmn';							// Your Auth Token from www.twilio.com/console
 
-var conn	= new xt.iConn('*LOCAL', 'User', 'Password');	// Your User and Password on your IBM i
+var conn    = new xt.iConn('*LOCAL', 'User', 'Password');	// Your User and Password on your IBM i
 var dtq     = new dq.iDataQueue(conn);
-var client	= new twilio.RestClient(accountSid, authToken);
+var client  = new twilio.RestClient(accountSid, authToken);
 
 var data = '';
 
