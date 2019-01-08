@@ -1,5 +1,5 @@
 var xt		= require('itoolkit');
-var dq		= require('itoolkit/lib/idataq');
+var dq		= require('itoolkit/lib/idataq2');
 var twilio	= require('twilio'); 
 
 var accountSid	= 'abcdefghijklmn';							// Your Account SID from www.twilio.com/console

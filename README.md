@@ -10,49 +10,65 @@ Twilio provides a Node.js REST API to send SMS messages. This solution give you 
 ```
 ## You need
 ```
-- Node.js 6.x 5733-OPS Option 10
-- Install Twilio Node.js API: npm install twilio
+- Node.js 8.x / 10.x
+- idb-connector: https://www.npmjs.com/package/idb-connector
+- itoolkit: https://www.npmjs.com/package/itoolkit
+- Twilio Node.js API: https://www.npmjs.com/package/twilio
 - The Twilio credentials - accountSid, authToken, SMS from number - from www.twilio.com/console
 ```
 
-Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
+Go [here](http://ibm.biz/ibmi-rpms) to get started with Node.js on IBM i.
 
-## Once you have installed Node.js 6.x set Node.js to V6
+## Once you have installed Node.js set Node.js to V10
 
 ```
-5250> qsh
-$ /QOpenSys/QIBM/ProdData/OPS/Node6/bin/nodever.sh 6
+SSH Terminal>
+$ PATH=/QOpenSys/pkgs/bin:$PATH
+$ nodever 10
 ```
 
 ## Check your Node.js version
 
 ```
-5250> qsh
+SSH Terminal>
+$ PATH=/QOpenSys/pkgs/bin:$PATH
 $ node -v
-v6.9.1  
+v10.15.0  
+```
+
+## Create your project
+
+```
+SSH Terminal>
+$ PATH=/QOpenSys/pkgs/bin:$PATH
+$ mkdir myproject
+$ cd myproject
+$ npm init
+$ npm i idb-connector itoolkit twilio --save
 ```
 
 ## Enable QRCVDTAQ wait for Node.js
 
 ```
-You'll find the Class iDataQueue in the file /QOpenSys/QIBM/ProdData/OPS/Node6/os400/xstoolkit/lib/idataq.js
-copy this file to the new file /QOpenSys/QIBM/ProdData/OPS/Node6/os400/xstoolkit/lib/idataq2.js
+You'll find the Class iDataQueue in the file myproject/node_modules/itoolkit/lib/idataq.js
+copy this file to the new file myproject/node_modules/itoolkit/lib/idataq2.js
 and change the following statements:
 
 line 70: iDataQueue.prototype.receiveFromDataQueue = function(name, lib, length, wait, cb) {
 line 76: pgm.addParam(wait, "5p0");
 ```
+
 ## Manual Install
-Create the following Directories
 
 ```
-5250> qsh
-$ mkdir -p /home/node  (for the sendSMSDataFromQueue.js)
+Copy the sendSMSDataFromQueue.js file to the directory myproject
 ```
 
 ## Start the Node.js program on your IBM i
 
 ```
-5250> qsh
-$ node /home/node/sendSMSDataFromQueue.js
+SSH Terminal>
+$ PATH=/QOpenSys/pkgs/bin:$PATH
+$ cd myproject
+$ node sendSMSDataFromQueue.js
 ```
