@@ -24,11 +24,11 @@ function sendSMS(data) {
 
 
 http.createServer(function(req, res) {
-	console.log('URL: '			      	+ req.url);
-	console.log('Method: '			    + req.method);
-	console.log('Headers: '			    + JSON.stringify(req.headers));
-	console.log('Host: '			      + req.headers.host);
-	console.log('Content-Type: '	  + req.headers['content-type']);
+	console.log('URL: '			    + req.url);
+	console.log('Method: '			+ req.method);
+	console.log('Headers: '			+ JSON.stringify(req.headers));
+	console.log('Host: '			+ req.headers.host);
+	console.log('Content-Type: '	+ req.headers['content-type']);
 	console.log('Content-Length: '	+ req.headers['content-length']);
 	
 	if (req.method === 'POST') {
