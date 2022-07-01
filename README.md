@@ -34,7 +34,7 @@ $ node /home/node/sendSMS.js
 ## Test your Node.js webservice with SQL
 ```
 values QSYS2.HTTP_POST(
-  'http://172.16.0.120:8080/sendsms',
+  'http://(IP from your IBM i):8080/sendsms',
   '{
     "from": "+49678901234",
     "to":   "+49171456789",
