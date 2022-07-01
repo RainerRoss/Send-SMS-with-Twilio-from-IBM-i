@@ -2,7 +2,7 @@
 
 ## How does it work
 
-Twilio provides a Node.js REST API to send SMS messages. With a simple RPGLE program you send the SMS data to the webservice on your IBM i (formerly AS/400) witten in Node.js. Once the message arrived the Node.js program send the message with the Twilio REST-API.
+Twilio provides a Node.js REST API to send SMS messages. With a simple RPGLE program you send the SMS data to the webservice on your IBM i (formerly AS/400) written in Node.js. Once the message arrived the Node.js program send the message with the Twilio REST-API.
 
 ## The JSON SMS data created with the RPG program
 ```
