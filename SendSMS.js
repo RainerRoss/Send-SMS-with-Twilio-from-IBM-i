@@ -3,7 +3,7 @@ const http			= require('http');
 const port			= 8080;
 
 const accountSid	= 'abcdefghijklmn';							// Your Account SID from www.twilio.com/console
-const authToken	= 'abcdefghijklmn';							// Your Auth Token from www.twilio.com/console
+const authToken     = 'abcdefghijklmn';							// Your Auth Token from www.twilio.com/console
 const client		= require('twilio')(accountSid, authToken);
 
 
