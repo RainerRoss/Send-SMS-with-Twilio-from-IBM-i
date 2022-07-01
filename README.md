@@ -2,57 +2,33 @@
 
 ## How does it work
 
-Twilio provides a Node.js REST API to send SMS messages. This solution give you a simple RPGLE program to send the SMS data to a DataQueue. When the SMS message is sent to the DataQueue a Node.js program is waiting for new SMS messages. Once the message arrived the Node.js program send the message with the Twilio REST-API.
+Twilio provides a Node.js REST API to send SMS messages. With a simple RPGLE program you send the SMS data to a webservice on your IBM i (formerly AS/400) witten in Node.js. Once the message arrived the Node.js program send the message with the Twilio REST-API.
 
-## The JSON SMS data from IBM i DataQueue
+## The JSON SMS data created with the RPG program
 ```
-{"body":"Hello World", "to":"+123456789", "from":"+123456789"}
+{"from":"+123456789", "to":"+123456789" , "text":"My Message"}
 ```
 ## You need
 ```
-- Node.js 6.x 5733-OPS Option 10
+- Node.js version 10 and higher - actually Node.js v18 - install Node.js with Open Source Package Management (ACS) or with "yum install nodejs18"
 - Install Twilio Node.js API: npm install twilio
 - The Twilio credentials - accountSid, authToken, SMS from number - from www.twilio.com/console
 ```
-
-Go [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/Node.js) to get started with Node.js on IBM i.
-
-## Once you have installed Node.js 6.x set Node.js to V6
-
-```
-5250> qsh
-$ /QOpenSys/QIBM/ProdData/OPS/Node6/bin/nodever.sh 6
-```
-
 ## Check your Node.js version
-
 ```
 5250> qsh
 $ node -v
-v6.9.1  
-```
-
-## Enable QRCVDTAQ wait for Node.js
-
-```
-You'll find the Class iDataQueue in the file /QOpenSys/QIBM/ProdData/OPS/Node6/os400/xstoolkit/lib/idataq.js
-copy this file to the new file /QOpenSys/QIBM/ProdData/OPS/Node6/os400/xstoolkit/lib/idataq2.js
-and change the following statements:
-
-line 70: iDataQueue.prototype.receiveFromDataQueue = function(name, lib, length, wait, cb) {
-line 76: pgm.addParam(wait, "5p0");
+v18.0.0   
 ```
 ## Manual Install
-Create the following Directories
-
 ```
 5250> qsh
-$ mkdir -p /home/node  (for the sendSMSDataFromQueue.js)
+$ mkdir -p /home/node  (for the sendSMS.js)
 ```
 
 ## Start the Node.js program on your IBM i
 
 ```
 5250> qsh
-$ node /home/node/sendSMSDataFromQueue.js
+$ node /home/node/sendSMS.js
 ```
