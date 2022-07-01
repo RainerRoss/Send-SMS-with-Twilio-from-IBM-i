@@ -31,7 +31,7 @@ $ mkdir -p /home/node  (for the sendSMS.js)
 5250> qsh
 $ node /home/node/sendSMS.js
 ```
-## Test your webservice with SQL
+## Test your Node.js webservice with SQL
 ```
 values QSYS2.HTTP_POST(
   'http://172.16.0.120:8080/sendsms',
