@@ -26,10 +26,22 @@ v18.0.0
 5250> qsh
 $ mkdir -p /home/node  (for the sendSMS.js)
 ```
-
 ## Start the Node.js program on your IBM i
-
 ```
 5250> qsh
 $ node /home/node/sendSMS.js
+```
+## Test your webservice with SQL
+```
+values QSYS2.HTTP_POST(
+  'http://172.16.0.120:8080/sendsms',
+  '{
+    "from": "01719637923",
+    "to":	"08941325294",
+    "text":	"My Message to you!"
+   }',
+  '{
+      "header": "Content-Type,application/json; charset=utf-8"      
+   }'
+);
 ```
