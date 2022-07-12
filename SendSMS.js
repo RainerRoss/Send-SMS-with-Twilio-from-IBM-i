@@ -35,7 +35,7 @@ http.createServer(function(req, res) {
 		let body = new Array();
 
 		req.on('data', function(data) {
-		body.push(data);
+		    body.push(data);
 		})
 		req.on('end', function() {
 			let data = JSON.parse(Buffer.concat(body).toString());
