@@ -32,7 +32,7 @@
          dcl-s   LocData     varchar(1000);
          dcl-s   LocResponse varchar(128);
 
-           LocUrl     = 'http://172.16.0.120:8080/sendsms';
+           LocUrl     = 'http://IBM i IP:8080/sendsms';
 
            exec sql
             set :LocHeader = JSON_OBJECT(
