@@ -11,7 +11,7 @@ Twilio provides a Node.js REST API to send SMS messages. With a simple RPG progr
 ## You need
 ```
 - Node.js version 10 or higher - actually Node.js v18 
-  install Node.js with Open Source Package Management (ACS) or with "yum install nodejs18"
+  Install Node.js with Access Client Solutions Open Source Package Management or with "yum install nodejs18"
 - Install Twilio Node.js API: npm install twilio
 - The Twilio credentials - accountSid, authToken - from www.twilio.com/console
 ```
